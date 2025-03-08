@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia da Mulher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7a9b, #ff8a00, #fffb00); /* Gradiente de cores vivas */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            min-height: 100vh;
+            overflow-y: scroll; /* Habilita a rolagem */
+        }
+
+        .messages-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            z-index: 1;
+        }
+
+        .message {
+            display: none; /* Inicialmente as mensagens estão ocultas */
+            background-color: rgba(255, 255, 255, 0.8); /* Cor sólida com transparência */
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        /* Animação das mensagens */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message .emoji {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+        .image-frame {
+            border: 8px solid #2e8b57; /* Moldura verde */
+            border-radius: 15px;
+            padding: 0;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            overflow: hidden; /* Impede que as imagens saiam dos limites do cartão */
+            display: flex;
+            justify-content: center; /* Centraliza a moldura */
+            align-items: center; /* Centraliza a imagem dentro da moldura */
+        }
+
+        .image-frame img {
+            width: 100%; /* A imagem ocupará 100% da largura do cartão */
+            height: 100%; /* A altura será 100% proporcional à largura */
+            object-fit: cover; /* A imagem vai cobrir completamente o espaço do cartão sem distorcer */
+            border-radius: 15px;
+            display: block;
+            margin: 0 auto; /* Centraliza as imagens dentro da moldura */
+        }
+
+        .heart {
+            position: fixed;
+            bottom: 0;
+            font-size: 2rem;
+            color: red;
+            animation: floatUp 3s infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+        }
+
+        .next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 2;
+        }
+
+        .next-button:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+<div class="messages-container">
+    <!-- Cartões com Imagens e Frases Intercaladas -->
+    <div class="message">
+        <div class="image-frame">
+            <img src="https://imgur.com/K5TSVPJ.jpg" alt="Imagem 1">
+        </div>
+        <p>Feliz Dia da Mulher minha flor!</p>
+        <div class="emoji">🌸</div>
+    </div>
+    <div class="message">
+        <p>Hoje, como qualquer dia, não podia deixar de exaltar a beleza feminina que você tem!</p>
+        <div class="emoji">😍</div>
+    </div>
+    <div class="message">
+        <div class="image-frame">
+            <img src="https://imgur.com/aDuQxHZ.jpg" alt="Imagem 2">
+        </div>
+        <p>Que a cada ano, nós homens possamos entender o valor feminino que vocês mulheres carregam dentro de si</p>
+        <div class="emoji">💐</div>
+    </div>
+    <div class="message">
+        <p>De certa forma, gostaria de dizer o quanto você se torna especial pra mim só pelo fato de respirar!</p>
+        <div class="emoji">💖</div>
+    </div>
+    <div class="message">
+        <div class="image-frame">
+            <img src="https://imgur.com/ce9jsZZ.jpg" alt="Imagem 3">
+        </div>
+        <p>Afinal, precisamos do toque de quem amamos quase tanto quanto de ar pra respirar</p>
+        <div class="emoji">💞</div>
+    </div>
+    <div class="message">
+        <p>Hoje, mais do que nunca, espero que você se sinta especial por quem te ama, inclusive eu kk</p>
+        <div class="emoji">❤️</div>
+    </div>
+    <div class="message">
+        <div class="image-frame">
+            <img src="https://imgur.com/2kpLZRE.jpg" alt="Imagem 4">
+        </div>
+        <p>Por isso, preparei essa surpresa pra você, uma forma de te falar sobre seu jeito que me fascina a cada dia</p>
+        <div class="emoji">🌟</div>
+    </div>
+    <div class="message">
+        <p>Afinal, eu te cativei, e sou responsável por tudo aquilo que cativo</p>
+        <div class="emoji">✨</div>
+    </div>
+    <div class="message">
+        <div class="image-frame">
+            <img src="https://imgur.com/ZTZ2LaT.jpg" alt="Imagem 5">
+        </div>
+        <p>Por isso, quero que saiba de cada detalhe do meu sentimento por você, e que essa chama não possa nunca apagar, permitindo que fiquemos juntos na oração e no discernimento da nossa caminhada e depois dela</p>
+        <div class="emoji">🔥</div>
+    </div>
+    <div class="message">
+        <p>Feliz Dia da Mulher minha princesa!</p>
+        <div class="emoji">👑</div>
+    </div>
+
+    <!-- Botão para exibir a próxima mensagem -->
+    <button class="next-button" onclick="nextMessage()">Descobrir próxima mensagem</button>
+</div>
+
+<script>
+    let currentMessage = 0;
+    const messages = document.querySelectorAll('.message');
+
+    // Função para exibir a próxima mensagem
+    function nextMessage() {
+        if (currentMessage < messages.length) {
+            messages[currentMessage].style.display = 'block';
+            messages[currentMessage].style.opacity = '1';
+            messages[currentMessage].style.transform = 'translateY(0)';
+            currentMessage++;
+        }
+    }
+
+    // Criar corações (2x mais)
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        document.body.appendChild(heart);
+
+        // Animação de coração flutuando
+        const leftPosition = Math.random() * 100;  // Posição aleatória horizontal
+        const animationDuration = Math.random() * 3 + 2;  // Aleatório entre 2s e 5s
+        heart.style.left = `${leftPosition}vw`;
+        heart.style.animationDuration = `${animationDuration}s`;
+
+        // Remover coração após animação
+        setTimeout(() => {
+            heart.remove();
+        }, animationDuration * 1000);
+    }
+
+    // Criar corações a cada 150ms (2x mais do que antes)
+    setInterval(createHeart, 150);
+</script>
+
+</body>
+</html>
